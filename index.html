@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Rock, Paper, Scissors</h1>
+    
+    <!-- Name Input Section -->
+    <div class="name-input">
+      <label for="player-name">Enter Your Name:</label>
+      <input type="text" id="player-name" placeholder="Your Name">
+      <button id="start-game">Start Game</button>
+    </div>
+
+    <!-- Match Type Selection Section -->
+    <div class="match-type-input" style="display: none;">
+      <label for="match-type">Choose Match Type:</label>
+      <select id="match-type">
+        <option value="3">3 Points</option>
+        <option value="5">5 Points</option>
+        <option value="10">10 Points</option>
+      </select>
+      <button id="start-match">Start Match</button>
+    </div>
+
+    <!-- Game Section (hidden initially) -->
+    <div class="game-section" style="display: none;">
+      <div class="scoreboard">
+        <p><span id="player-name-display"></span>: <span id="player-score">0</span></p>
+        <p>Computer: <span id="computer-score">0</span></p>
+      </div>
+      <div class="choices">
+        <button class="choice" data-choice="rock">🪨 Rock</button>
+        <button class="choice" data-choice="paper">📄 Paper</button>
+        <button class="choice" data-choice="scissors">✂️ Scissors</button>
+      </div>
+      <div class="result">
+        <h2 id="result-text">Make your choice!</h2>
+      </div>
+      <div class="round-info">
+        <p>Move: <span id="round-counter">1</span></p>
+        <p>Winning Score: <span id="match-goal"></span></p>
+      </div>
+    </div>
+
+    <!-- Banner for Win/Loss/Draw -->
+    <div id="game-banner" class="game-banner" style="display: none;"></div>
+    <div id="Final" class="Final" style="display:none;">
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+  <audio id="win-sound" src="mixkit-instant-win-2021.wav"></audio>
+  <audio id="lose-sound" src="mixkit-losing-marimba-2025.wav"></audio>
+  <audio id="winning-sound" src="cheering-and-clapping-crowd-2-6029.mp3"></audio>
+
+ 
+</body>
+</html>
